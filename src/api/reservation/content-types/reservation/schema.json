@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Reservation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_user": {
+      "type": "string",
+      "required": true
+    },
+    "phone_user": {
+      "type": "string",
+      "required": true
+    },
+    "email_user": {
+      "type": "email",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "reserved",
+        "inProgress",
+        "finished"
+      ],
+      "default": "reserved",
+      "required": true
+    },
+    "isPaid": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "reserved_date": {
+      "type": "datetime",
+      "default": "2024-07-17T07:00:39.777Z",
+      "required": true
+    }
+  }
+}
